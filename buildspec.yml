@@ -18,4 +18,4 @@ phases:
 
   post_build:
     commands:
-      - aws s3 cp dist/my-angular-project/* s3://prod-bucket-demo-b123 --recursive
+      - aws s3 cp ./dist/my-angular-project/ s3://prod-bucket-demo-b123 --recursive
