@@ -16,9 +16,9 @@ phases:
     commands:
       - ng build --prod
 
-  # post_build:
-  #   commands:
-  #     - aws s3 cp ./dist/my-angular-project/ s3://prod-bucket-demo-b123 --recursive
+  post_build:
+    commands:
+      - aws s3 cp ./dist/my-angular-project/ s3://qa-bucket-demo-b123 --recursive
 
 artifacts:
   base-directory: ./dist/my-angular-project
